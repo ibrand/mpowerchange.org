@@ -5,7 +5,7 @@ wordpress_sites:
     local_path: ../site 
     repo: git@github.com:pixelcollective/mpowerchange.org.git 
     repo_subtree_path: site 
-    branch: staging
+    branch: development
     multisite:
       enabled: false
     ssl:
