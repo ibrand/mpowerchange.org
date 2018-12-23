@@ -1,0 +1,23 @@
+wordpress_sites:
+  mpowerchange.org:
+    site_hosts:
+      - canonical: mpowerchange.org
+      redirects:
+        - www.mpowerchange.org
+    local_path: ../site 
+    repo: git@github.com:pixelcollective/mpowerchange.org.git 
+    repo_subtree_path: site 
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: letsencrypt
+    cache:
+      enabled: true
+    backup:
+      enabled: true
+      auto: true
+      target: b2://account_id:application_key@mpowerchange-org/
+      schedule: '0 0 3 * * ?'
+      purge: true

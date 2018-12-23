@@ -1,0 +1,13 @@
+wordpress_sites:
+  mpowerchange.org:
+    site_hosts:
+      - canonical: mpowerchange.local
+    local_path: ../site 
+    admin_email: developers@tinypixel.io
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false

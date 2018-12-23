@@ -1,0 +1,15 @@
+wordpress_sites:
+  mpowerchange.org:
+    site_hosts:
+      - canonical: staging.mpowerchange.org
+    local_path: ../site 
+    repo: git@github.com:pixelcollective/mpowerchange.org.git 
+    repo_subtree_path: site 
+    branch: staging
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: letsencrypt
+    cache:
+      enabled: false

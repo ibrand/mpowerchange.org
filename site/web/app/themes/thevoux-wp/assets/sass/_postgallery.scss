@@ -1,0 +1,226 @@
+.post-gallery-lightbox {
+	.mfp-content {
+		height: 100vh;
+		max-height: 100vh;
+		overflow: scroll;
+		@include min-break($break-small) {
+			overflow: hidden;
+		}
+	}
+	.mfp-arrow {
+		display: none;
+	}
+}
+.post-gallery-content {
+	height: 100%;
+	padding-top: 110px;
+	.lightbox-header {
+		background: #fff;
+		padding: 10px 15px;
+		height: 110px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		
+		@include min-break($break-small) {
+			padding: 10px 20px;
+		}
+		@include min-break($break-medium) {
+			padding: 10px 30px;
+		}
+		.logolink {
+			display: block;
+			line-height: 90px;
+			.logoimg {
+				max-height: 40px;
+			}
+		}
+		.lightbox-close {
+			display: block;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			border: 0;
+			outline: 0;
+			background: none;
+			cursor: pointer;
+			span {
+				display: inline-block;
+				margin-right: 15px;
+				font-size: 20px;
+				font-weight: 400;
+				vertical-align: middle;
+			}
+		}
+		.columns {
+			display: flex;
+			align-items: center;
+			
+			&.center-column {
+				justify-content: center;
+			}
+			&.close-column {
+				justify-content: flex-end;
+			}
+		}
+	}
+	
+	.thb-gallery-arrow {
+		display: inline-flex;
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		@include box-shadow(0 2px 8px rgba(#000,0.1));
+		@include transition(box-shadow .25s $transition);
+		
+		&:hover {
+			@include box-shadow(0 2px 8px rgba(#000,0.2));
+			svg {
+				fill: rgba(#000, 0.6);
+			}
+		}
+		svg {
+			fill: rgba(#000, 1);
+			.thb-arrow-head,
+			.thb-arrow-line {
+				@extend .quick-transition;
+			}
+		}
+		
+		&.prev {
+			margin-right: 5px;
+			
+			.thb-arrow-head {
+				@include translateX(4px);
+			}
+			.thb-arrow-line {
+				@include transform-origin(100%, center);
+				@include transform(translateX(4px) scale(0,1));
+			}
+			&:hover {
+				.thb-arrow-head {
+					@include translateX(0px);
+				}
+				.thb-arrow-line {
+					@include transform(translateX(0px) scale(1,1));
+				}
+			}
+		}
+		&.next {
+			right: 40px;
+			
+			.thb-arrow-head {
+				@include translateX(-4px);
+			}
+			.thb-arrow-line {
+				@include transform-origin(0, center);
+				@include transform(translateX(-4px) scale(0,1));
+			}
+			&:hover {
+				.thb-arrow-head {
+					@include translateX(0px);
+				}
+				.thb-arrow-line {
+					@include transform(translateX(0px) scale(1,1));
+				}
+			}
+		}
+	}
+	.row {
+		height: 100%;
+		.columns {
+			height: auto;
+			
+			@include min-break($break-small) {
+				height: 100%;
+			}
+			
+			&.image {
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				@include min-break($break-small) {
+					padding: 25px;
+				}
+				@include min-break($break-medium) {
+					padding: 35px;
+				}
+				@include min-break($break-large) {
+					padding: 50px;
+				}
+					
+				.attachment-full {
+					max-height: 100%;
+					width: auto;
+				}
+				.thb-gallery-arrow {
+					display: flex;
+					position: absolute;
+					top: 50%;
+					margin-top: -18px;
+					&.prev {
+						left: 15px;
+					}
+					&.next {
+						right: 15px;
+					}
+				}
+			}
+			&.image-text {
+				background: #1d1d1d;
+				padding: 15px 15px;
+				
+				@include min-break($break-small) {
+					padding: 25px;
+					overflow-x: 	hidden;
+					overflow-y: scroll;
+				}
+				@include min-break($break-medium) {
+					padding: 35px;
+				}
+				@include min-break($break-large) {
+					padding: 50px;
+				}
+				.meta {
+					display: flex;
+					margin-bottom: 20px;
+					span {
+						color: #767676;
+						font-size: 13px;
+						em {
+							display: inline-flex;
+							margin-right: 4px;
+							color: #d5d5d5;
+							font-style: normal;
+							font-weight: 600;	
+						}
+					}
+				}
+				
+				h5 {
+					color: #fff;
+					font-weight: 600;
+					font-size: 18px;
+					margin: 0 0 15px 0;
+				}
+				h6 {
+					color: #fff;	
+				}
+				p {
+					font-size: 14px;
+					color: #cfcfcf;	
+				}
+				small {
+					font-size: 12px;
+					color: #767676;	
+				}
+			}
+		}
+	}
+}

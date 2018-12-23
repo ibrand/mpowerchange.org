@@ -1,0 +1,108 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock",
+    "roots",
+    "wordpress",
+    "stack",
+    "composer",
+    "vagrant",
+    "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.tinypixel.io/satispress/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/pixelcollective/corporate-communion"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^2.0.1",
+    "roots/wordpress": "5.0.2",
+    "oscarotero/env": "^1.1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wp-config": "1.0.0",
+    "roots/soil": ">=3.7.3",
+    "wpackagist-plugin/updraftplus": ">=1",
+    "tiny-packagist/wp-migrate-db-pro": ">=1",
+    "tiny-packagist/wp-migrate-db-pro-cli": ">=1",
+    "tiny-packagist/wp-migrate-db-pro-media-files": ">=1",
+    "tiny-packagist/wp-migrate-db-pro-multisite-tools": ">=1",
+    "tiny-pixel/wp-performant-media": ">=1",
+    "tiny-pixel/corporate-communion": "@dev",
+    "wpackagist-plugin/stream": "^3.2",
+    "wpackagist-plugin/classic-editor": "^1.0",
+    "wpackagist-plugin/autodescription": ">=3",
+    "wpackagist-plugin/guest-author-name": ">=3.9",
+    "wpackagist-plugin/cdn-enabler": ">=1",
+    "wpackagist-plugin/disable-comments": ">=1 ",
+    "wpackagist-plugin/duplicate-post": ">3",
+    "wpackagist-plugin/imagify": ">=1.8",
+    "wpackagist-plugin/fb-instant-articles": "4.2.0",
+    "wpackagist-plugin/mailgun": ">=1.5.11",
+    "wpackagist-plugin/mashsharer": ">=3.5.3",
+    "wpackagist-plugin/members": ">=2.1.0",
+    "wpackagist-plugin/redirection": ">=3.3.1",
+    "wpackagist-plugin/simple-local-avatars": ">=2.0",
+    "wpackagist-plugin/wp-dobby": "1.3.0",
+    "wpackagist-plugin/user-switching": ">=1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}
