@@ -1,6 +1,5 @@
 mpowerchange.org ansible_host=159.203.122.197
 
-
 [production]
 mpowerchange.org
 

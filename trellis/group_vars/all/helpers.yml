@@ -3,7 +3,7 @@ wordpress_env_defaults:
   db_name: "{{ item.key | underscore }}_{{ env }}"
   db_user: "{{ item.key | underscore }}"
   db_user_host: localhost
-  disable_wp_cron: true
+  disable_wp_cron: false
   wp_env: "{{ env }}"
   wp_home: "{{ ssl_enabled | ternary('https', 'http') }}://{{ site_hosts_canonical | first }}"
   wp_siteurl: "{{ ssl_enabled | ternary('https', 'http') }}://{{ site_hosts_canonical | first }}/wp"

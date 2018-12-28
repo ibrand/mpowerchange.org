@@ -2,8 +2,8 @@ wordpress_sites:
   mpowerchange.org:
     site_hosts:
       - canonical: mpowerchange.org
-      redirects:
-        - www.mpowerchange.org
+        redirects:
+          - www.mpowerchange.org
     local_path: ../site 
     repo: git@github.com:pixelcollective/mpowerchange.org.git 
     repo_subtree_path: site 
@@ -11,7 +11,7 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
+      enabled: true
       provider: letsencrypt
     cache:
       enabled: true
