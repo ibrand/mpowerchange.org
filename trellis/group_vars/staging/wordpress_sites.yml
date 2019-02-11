@@ -2,9 +2,9 @@ wordpress_sites:
   mpowerchange.org:
     site_hosts:
       - canonical: staging.mpowerchange.org
-    local_path: ../site 
-    repo: git@github.com:pixelcollective/mpowerchange.org.git 
-    repo_subtree_path: site 
+    local_path: ../mpowerchange.org
+    repo: git@github.com:pixelcollective/mpowerchange.org.git
+    repo_subtree_path: mpowerchange.org
     branch: development
     multisite:
       enabled: false
