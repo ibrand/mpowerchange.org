@@ -464,11 +464,11 @@
         },
         {
             "name": "tiny-packagist/wp-migrate-db-pro",
-            "version": "1.9.1",
+            "version": "1.9.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.tinypixel.io/satispress/wp-migrate-db-pro/1.9.1",
-                "shasum": "14fdb06109ad0df76312a08bd14333dcf23f091a"
+                "url": "https://packages.tinypixel.io/satispress/wp-migrate-db-pro/1.9.2",
+                "shasum": "8b4335a03aff51ee06ae280fa46da2da989a103a"
             },
             "require": {
                 "composer/installers": "^1.0"
