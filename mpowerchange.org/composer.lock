@@ -502,11 +502,11 @@
         },
         {
             "name": "tiny-packagist/wp-migrate-db-pro-media-files",
-            "version": "1.4.12",
+            "version": "1.4.13",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.tinypixel.io/satispress/wp-migrate-db-pro-media-files/1.4.12",
-                "shasum": "fcea9a4c99476745cf08cddcb27580de821d3d83"
+                "url": "https://packages.tinypixel.io/satispress/wp-migrate-db-pro-media-files/1.4.13",
+                "shasum": "28e92f6637306f55b2a07812bd30b07a19b5d012"
             },
             "require": {
                 "composer/installers": "^1.0"
