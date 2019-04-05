@@ -56,10 +56,6 @@
     "roots/wp-config": "1.0.0",
     "roots/soil": ">=3.7.3",
     "wpackagist-plugin/updraftplus": ">=1",
-    "tiny-packagist/wp-migrate-db-pro": ">=1",
-    "tiny-packagist/wp-migrate-db-pro-cli": ">=1",
-    "tiny-packagist/wp-migrate-db-pro-media-files": ">=1",
-    "tiny-packagist/wp-migrate-db-pro-multisite-tools": ">=1",
     "tiny-pixel/wp-performant-media": ">=1",
     "tiny-pixel/corporate-communion": "@dev",
     "wpackagist-plugin/stream": "^3.2",
@@ -75,7 +71,6 @@
     "wpackagist-plugin/members": ">=2.1.0",
     "wpackagist-plugin/redirection": ">=3.3.1",
     "wpackagist-plugin/simple-local-avatars": ">=2.0",
-    "wpackagist-plugin/wp-dobby": "1.3.0",
     "wpackagist-plugin/user-switching": ">=1",
     "wpackagist-plugin/duplicate-post": ">=3.2.2"
   },
